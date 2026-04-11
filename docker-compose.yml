@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - "8001:8000"
+    environment:
+      - DATABASE_URL=postgresql://equilibrium:password@db:5432/equilibrium
+    depends_on:
+      - db
+    restart: always
+
+  db:
+    image: postgres:15
+    environment:
+      - POSTGRES_USER=equilibrium
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=equilibrium
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data
+    restart: always

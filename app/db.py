@@ -1,13 +1,14 @@
-﻿import os
+import os
 from sqlmodel import SQLModel, create_engine, Session
 
-DB_PATH = os.getenv("DB_PATH", "bbs_v2.sqlite3")
-DATABASE_URL = f"sqlite:///{DB_PATH}"
+DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///./equilibrium.db")
+
+connect_args = {"check_same_thread": False} if DATABASE_URL.startswith("sqlite") else {}
 
 engine = create_engine(
     DATABASE_URL,
     echo=False,
-    connect_args={"check_same_thread": False},
+    connect_args=connect_args,
 )
 
 def init_db() -> None:
