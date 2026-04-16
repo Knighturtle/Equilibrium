@@ -1,48 +1,55 @@
-# PROMPT WARZONE
+# Equilibrium
 
 ![Python](https://img.shields.io/badge/Python-3.x-blue)
 ![FastAPI](https://img.shields.io/badge/FastAPI-Framework-green)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 ![Status](https://img.shields.io/badge/Status-Active_Development-brightgreen)
-![AI](https://img.shields.io/badge/AI-Experimental-purple)
+![AI](https://img.shields.io/badge/AI-Ollama-purple)
 
-🚀 AI-Enhanced Bulletin Board System  
-⚡ Experimental Multi-Agent Interaction Platform
+🚀 **Autonomous AI-Bookkeeping System**
+
+Equilibrium is a next-generation AI bookkeeping system designed to maintain financial balance and integrity. 
+
+## 🌌 Philosophy & Brand Identity
+
+At the core of Equilibrium lies the **Antigravity** philosophy:
+- **Elimination of Digital Gravity**: Freeing financial data from sluggish, centralized, and legacy systems, ensuring seamless and frictionless operations.
+- **Adherence to Local Privacy**: Financial data is handled with the utmost security. Utilizing local LLMs via Ollama ensures that sensitive data never leaves your infrastructure. 
 
 ---
 
 ## 📌 Overview
 
-**PROMPT WARZONE** is an AI-driven bulletin board system designed as an experimental platform for:
-
-- Multi-agent AI interaction
-- Autonomous AI conversations
-- AI-assisted user engagement
-- Real-time dynamic discussions
-
-Built with a modern Python web stack for performance, flexibility, and extensibility.
+Equilibrium is a modernized, intelligent, self-balancing engine. It acts as the vanguard of autonomous financial systems, providing instant technical transparency and empowering users with locally-run, privacy-first AI intelligence. 
 
 ---
 
 ## 🧱 Tech Stack
 
-- **Backend** → FastAPI
-- **Database** → SQLite
-- **ORM** → SQLModel
-- **Templates** → Jinja2
-- **Scheduler / AI Logic** → APScheduler
-- **AI Extensions** → Ollama / Local LLM Support
+- **Core Engine (Backend)** → FastAPI
+- **Database & ORM** → SQLModel
+- **AI Processing** → Ollama (for Local LLM inference)
 
 ---
 
-## 🚀 Features
+## 📂 Directory Structure
 
-✔ AI-Enhanced Conversations  
-✔ Multi-Agent Response Simulation  
-✔ Lightweight & Fast Architecture  
-✔ Local AI Model Integration  
-✔ Extensible Modular Design  
-✔ Experimental AI Playground  
+```text
+Equilibrium/
+├── app/                  # Core Engine
+│   ├── ai/               # AI logic and local model integration
+│   ├── templates/        # Application templates
+│   ├── db.py             # Database integration
+│   ├── main.py           # FastAPI application entry point
+│   ├── models.py         # SQLModel database schemas
+│   └── ollama_client.py  # Local LLM integration client
+├── static/               # Frontend Assets
+│   ├── app.js            # Client-side logic
+│   └── style.css         # Styling rules
+├── docker-compose.yml    # Service orchestration
+├── Dockerfile            # Container configuration
+└── requirements.txt      # Dependencies
+```
 
 ---
 
@@ -51,17 +58,17 @@ Built with a modern Python web stack for performance, flexibility, and extensibi
 ### Prerequisite
 
 - Python 3.10+
-- (Optional) Ollama for local AI features
+- Ollama (for local AI features)
 
-### 1️⃣ Create Virtual Environment
+### 1️⃣ Environment Setup
 
 ```bash
-# Windows
 python -m venv .venv
+
+# Windows
 .venv\Scripts\activate
 
 # Linux/Mac
-python3 -m venv .venv
 source .venv/bin/activate
 ```
 
@@ -77,32 +84,15 @@ pip install -r requirements.txt
 uvicorn app.main:app --reload
 ```
 
-Server will start at: `http://127.0.0.1:8000`
-
----
-
-## 🔧 Configuration
-
-Copy `.env.example` to `.env` and configure your settings:
-
-```bash
-cp .env.example .env
-```
-
-| Variable | Description | Default |
-| :--- | :--- | :--- |
-| `OLLAMA_HOST` | URL for Ollama API | `http://127.0.0.1:11434` |
-| `ADMIN_TOKEN` | Token for admin routes | `changeme` |
+The system will initialize at: `http://127.0.0.1:8000`
 
 ---
 
 ## 🗺️ Roadmap
 
-- [ ] User Authentication System
-- [ ] Improved AI Persona Management
-- [ ] Real-time WebSocket Updates
-- [ ] Docker Containerization
-- [ ] deployment scripts
+- [ ] Complete AI automated reconciliation
+- [ ] Implement secure containerized deployment (VPS/Docker)
+- [ ] Expand frontend dashboard for real-time ledger viewing
 
 ---
 
